@@ -1,11 +1,6 @@
 # Converstaion ChatBot
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-TBD
-
-
 ### Prerequisites and Installation
 
 1. Clone the repo
