@@ -1,0 +1,40 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story : Express Thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story : product information
+  steps:
+  - intent: product_info
+  - action: utter_ask_product_name
+  - intent: product_detail
+  - action: action_extract_phone_name_entity
+  
+
+- story : product order status
+  steps:
+  - intent: order_status
+  - action: utter_ask_email_address
+  - intent: give_email_address
+  - action: action_extract_email_address
+  - intent: confirm_order
+  - action: utter_order_status_fetched
+  
+
+- story : change shipping address
+  steps:
+  - intent: update_shipping_address
+  - action: utter_ask_email_address_for_address
+  - intent: give_email_address
+  - action: action_extract_email_address_for_address
+  - intent: give_address
+  - action: action_update_address

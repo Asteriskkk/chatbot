@@ -1,0 +1,58 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - product_info
+  - product_detail
+  - order_status
+  - give_email_address
+  - confirm_order
+  - update_shipping_address
+  - give_address
+ 
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_thanks:
+  - text: "you are welcome"
+
+  utter_ask_product_name:
+  - text: 'Sure, Which Product you want to know about'
+  - text: Of course! Which product would you like information on?
+  - text: Sure thing! Which product are you curious about?
+
+  utter_ask_email_address:
+  - text: 'Sure, Please share your email address, attached to your order'
+
+  utter_ask_email_address_for_address:
+  - text: 'Sure, Please share your email address to update shipping address'
+
+
+  utter_order_status_fetched:
+  - text: 'Your Order will be delivered within 2 days, It has been dispatched from the warehouse'
+
+
+
+entities:
+- product_name
+- email_adress
+- address
+
+actions:
+  - action_extract_phone_name_entity
+  - action_extract_email_address
+  - action_extract_email_address_for_address
+  - action_update_address
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

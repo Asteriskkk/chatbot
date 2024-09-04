@@ -1,0 +1,194 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - appreciated
+    - many thanks
+- intent: product_info
+  examples: |
+    - inform me about a product
+    - inquire me about a product
+    - inform me about a product please
+    - inquire me about a product please
+    - inform me about a product pls
+    - inquire me about a product pls
+    - i want to be informed about a product
+    - i want to be inquired about a product
+    - i want to be informed about a product please
+    - i want to be inquired about a product please
+    - i want to be informed about a product pls
+    - i want to be inquired about a product pls
+    - inform me about some product
+    - inquire me about some product
+    - inform me about some product please
+    - inquire me about some product please
+    - inform me about some product pls
+    - inquire me about some product pls
+    - i want to be informed about some product
+    - i want to be inquired about some product
+    - i want to be informed about some product please
+    - i want to be inquired about some product please
+    - i want to be informed about some product pls
+    - i want to be inquired about some product pls
+    - inform me about your products
+    - inquire me about your products
+    - inform me about your products please
+    - inquire me about your products please
+    - inform me about your products pls
+    - inquire me about your products pls
+    - i want to be informed about your products
+    - i want to be inquired about your products
+    - i want to be informed about your products please
+    - i want to be inquired about your products please
+    - i want to be informed about your products pls
+    - i want to be inquired about your products pls
+    - inform me about the products
+    - inquire me about the products
+    - inform me about the products please
+    - inquire me about the products please
+    - inform me about the products pls
+    - inquire me about the products pls
+    - i want to be informed about the products
+    - i want to be inquired about the products
+    - i want to be informed about the products please
+    - i want to be inquired about the products please
+    - i want to be informed about the products pls
+    - i want to be inquired about the products pls
+
+- intent: product_detail
+  examples: |
+    - [iphone](product_name)
+    - [iphone 15](product_name)
+    - [iphone 15 pro](product_name)
+    - top [10 phone](product_name)
+
+- intent: order_status
+  examples: |
+    - i want to know about my order details
+    - i have order a product and i want to know the status
+    - i want to know the status of my purchased product
+    - Can you provide me with the details of my order?
+    - I would like to check the information regarding my order.
+    - Could you tell me about my order details?
+    - Please share the specifics of my order.
+    - I need to know the details of my order.
+    - Can you give me an update on my order?
+    - I would like to get the details of my order.
+    - Could you provide information about my order?
+    - Please let me know the details of my order.
+    - I want to find out the specifics of my order.
+    - Can you update me on the status of my ordered product?
+    - I would like to know the current status of my order.
+    - Could you tell me the status of the product I ordered?
+    - Please provide an update on my ordered product.
+    - I need to check the status of my order.
+    - Can you inform me about the status of my ordered product?
+    - I would like to get an update on my order status.
+    - Could you let me know the status of the product I purchased?
+    - Please tell me the current status of my ordered product.
+    - I want to find out the status of my order.
+
+- regex: email_adress
+  examples: |
+    - (?:[a-z0-9!#$%&'*+\=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\=?^_`{|}~-]+)*|\"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
+- intent: give_email_address
+  examples: |
+    - my email adress is [example@mail.com](email_adress)
+    - my mail adress is [example@domain.com](email_adress)
+    - my mail is [e.xample@mail.com](email_adress)
+    - my e-mail adress is [example@mail.fr](email_adress)
+    - my e-mail is [example@domain.fr](email_adress)
+    - [e.xample@mail.fr](email_adress)
+    - [exampl.e@mail.fr](email_adress)
+    - [exampl.e@mail.com](email_adress)
+    - email adress is [for1.example2@mail.com](email_adress)
+    - please send it to [for.example@domain.com](email_adress)
+    - pls send it to [example.for@website.com](email_adress)
+    - [someone@something.us](email_adress)
+    - [somebody@something.de](email_adress)
+    - [thing@other.ma](email_adress)
+    - [people@firm.it](email_adress)
+    - here : [instance@host.net](email_adress)
+    - here is my email adress : [someone123456789@stuff.me](email_adress)
+    - here [for@example.mc](email_adress)
+    - here is my email adress [for@instance.pt](email_adress)
+    - [maybe@trick.es](email_adress) is my adress
+    - [excuse@me.cn](email_adress) is my email
+    - [love@ploy.lb](email_adress) is my email adress
+    - [sample@gizmo.trick.com](email_adress), contact me here
+    - [case@model.illustration.fr](email_adress), contact-me here
+    - it's [ideal.examplar@schema.com](email_adress)
+    - [such@as.examples.net](email_adress)
+    - [instance.s@ho.st.com](email_adress)
+    - [alright123@tip.giz.se](email_adress)
+    - [aaa.bbb@ccc.ddd.com](email_adress)
+    - [a.bcdefg@hijkl.com](email_adress)
+    - [EXample.azerty@cdefg.com](email_adress)
+    - [EXample@nbvcx.com](email_adress)
+    - [mail.adress@domain.host.com](email_adress)
+    - [mail456.adress@domain.host.com](email_adress)
+    - [mail789.adress123@domain.host.com](email_adress)
+    - [mail.adress159@domain.host.com](email_adress)
+    - [mail734@host.com](email_adress)
+    - [mail238.adress@domain.com](email_adress)
+    - [mail.adress146@domain.com](email_adress)
+    - [mail256.adress357@host.com](email_adress)
+
+- intent: confirm_order
+  examples: |
+    - yes, that is my order looking for
+    - yea i want to know about the same order
+    - exactly i am looking for the same order staus
+
+- intent: update_shipping_address
+  examples: |
+    - I need to update my shipping address for my order.
+    - Can I change the delivery address for my recent purchase?
+    - Please help me update the shipping address on my order.
+    - I want to modify the shipping address for my package.
+    - How can I change the delivery address for my order?
+    - I would like to update the address where my order will be shipped.
+    - Can you assist me in changing the shipping address for my order?
+    - I need to correct the shipping address for my recent order.
+    - Please change the delivery address for my current order.
+    - I want to update the shipping address for my purchase.
+
+
+- intent: give_address
+  examples: |
+    - here is my address : [12th Avenue, Street 1B, NYC](address)
+    - [12th Avenue, Street 1B, NYC](address)
+
