@@ -46,35 +46,13 @@ nlu:
     - inform me about a product pls
     - inquire me about a product pls
     - i want to be informed about a product
-    - i want to be inquired about a product
-    - i want to be informed about a product please
-    - i want to be inquired about a product please
-    - i want to be informed about a product pls
-    - i want to be inquired about a product pls
     - inform me about some product
     - inquire me about some product
-    - inform me about some product please
-    - inquire me about some product please
-    - inform me about some product pls
-    - inquire me about some product pls
     - i want to be informed about some product
-    - i want to be inquired about some product
-    - i want to be informed about some product please
-    - i want to be inquired about some product please
-    - i want to be informed about some product pls
-    - i want to be inquired about some product pls
     - inform me about your products
     - inquire me about your products
     - inform me about your products please
-    - inquire me about your products please
-    - inform me about your products pls
-    - inquire me about your products pls
     - i want to be informed about your products
-    - i want to be inquired about your products
-    - i want to be informed about your products please
-    - i want to be inquired about your products please
-    - i want to be informed about your products pls
-    - i want to be inquired about your products pls
     - inform me about the products
     - inquire me about the products
     - inform me about the products please
@@ -82,11 +60,6 @@ nlu:
     - inform me about the products pls
     - inquire me about the products pls
     - i want to be informed about the products
-    - i want to be inquired about the products
-    - i want to be informed about the products please
-    - i want to be inquired about the products please
-    - i want to be informed about the products pls
-    - i want to be inquired about the products pls
 
 - intent: product_detail
   examples: |
@@ -94,6 +67,10 @@ nlu:
     - [iphone 15](product_name)
     - [iphone 15 pro](product_name)
     - top [10 phone](product_name)
+    - [samsung galaxy 2](product_name)
+    - [one plus ce](product_name)
+    - [oppo 2e](product_name)
+
 
 - intent: order_status
   examples: |
@@ -169,7 +146,7 @@ nlu:
 
 - intent: confirm_order
   examples: |
-    - yes, that is my order looking for
+    - yes, my order details is correct
     - yea i want to know about the same order
     - exactly i am looking for the same order staus
 
@@ -189,6 +166,46 @@ nlu:
 
 - intent: give_address
   examples: |
-    - here is my address : [12th Avenue, Street 1B, NYC](address)
-    - [12th Avenue, Street 1B, NYC](address)
+    - Here is my address: [456 Palm Drive, Miami, USA](address)
+    - [123 Maple Street, Toronto, Canada](address)
+    - My new address: [789 Cedar Lane, Sydney, Australia](address)
+    - Address: [908 Oak Avenue, Tokyo, Japan](address)
+    - [555 Pine Street, Cape Town, South Africa](address), this is my new address
+    - New address: [333 Willow Road, Berlin, Germany](address)
+    - [777 Birch Way, Buenos Aires, Argentina](address)
+    - My new shipping address is: [999 Elm Street, Dubai, UAE](address)
+    - New shipping address: [1234 Ash Boulevard, Mumbai, India](address)
+    - Shipping address: [876 Walnut Crescent, Paris, France](address)
+    - [123 Sequoia Drive, São Paulo, Brazil](address), is my new shipping address
+    - Here is my address: [456 Redwood Avenue, Auckland, New Zealand](address)
+    - [910 Fir Street, Dublin, Ireland](address)
+    - My new address: [321 Spruce Lane, Rome, Italy](address)
+    - Address: [567 Chestnut Road, Stockholm, Sweden](address)
+    - [890 Poplar Way, Singapore], this is my new address
+    - New address: [345 Cypress Street, Seoul, South Korea](address)
+    - [234 Magnolia Avenue, Vancouver, Canada](address)
+    - My new shipping address is: [678 Hickory Street, Madrid, Spain](address)
+    - New shipping address: [987 Juniper Road, Vienna, Austria](address)
+    - Shipping address: [432 Olive Street, Bangkok, Thailand](address)
+    - [111 Aspen Drive, Oslo, Norway](address), is my new shipping address
+
+- intent: product_price
+  examples: |
+    - what is the price of [samsung galaxy s23](product_price)
+    - price of [google pixel 8](product_price)
+    - I want to bye [iphone 15](product_price) and what is the price
+    - tell me the price of [sony xperia x](product_price)
+    - what is the price of [iphone 14](product_price)
+    - price of [Motorola Edge 40](product_price)
+    - I want to bye [Huwawei P60](product_price) and what is the price
+    - tell me the price of [Xiaomi 13 pro](product_price)
+    - what is the price of [oppo find x6 pro](product_price)
+    - price of [Asus ROG Phone 7](product_price)
+    - I want to by [Realme GT 3](product_price) and what is the price
+    - tell me the price of [Nokia X30](product_price)
+    - what is the price of [Legion Phone Duel 20](product_price)
+    - price of [ZTE Ultra](product_price)
+    - I want to by [Fair Phone 5](product_price) and what is the price
+    - tell me the price of [iphone 14 pro max](product_price)
+
 

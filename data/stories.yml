@@ -18,6 +18,13 @@ stories:
   - action: utter_ask_product_name
   - intent: product_detail
   - action: action_extract_phone_name_entity
+  - intent: product_price
+  - action: action_product_price
+
+- story : product price
+  steps:
+  - intent: product_price
+  - action: action_product_price
   
 
 - story : product order status
